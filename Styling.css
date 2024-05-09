@@ -1,0 +1,280 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: calibri;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282a35;
+    font-size: 20px;
+}
+
+.videoContainer {
+    position: relative;
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 1;
+}
+
+.customControls {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    bottom: 0px;
+    box-sizing: border-box;
+    pointer-events: none;
+    box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.customControls .bottomControls {
+    pointer-events: auto;
+}
+
+.topControls,
+.bottomControls {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+.playbackCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.playbackCenterIcons {
+    width: 50%;
+    height: 50%;
+    fill: #fff;
+    stroke: #fff;
+}
+
+.pauseIconCenter {
+    display: none;
+}
+
+.topControls {
+    top: 0px;
+    padding: 10px 20px;
+}
+
+.bottomControls {
+    display: flex;
+    flex-direction: column;
+    bottom: 0px;
+    background: transparent;
+}
+
+.videoTitle {
+    font-size: 40px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.bottomControlsTop,
+.bottomControlsBottom {
+    width: 100%;
+}
+
+.bottomControlsBottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftBottomControls,
+.rightBottomControls {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftBottomControls {
+    left: 0px;
+
+}
+
+.rightBottomControls {
+    right: 0px;
+    text-align: right;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.videoBtn {
+    height: 35px;
+    width: 35px;
+    margin: 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volumeContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.volumeSlider {
+    height: 100% !important;
+    margin: 0px !important;
+    width: 0px;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    display: none;
+    overflow: hidden;
+}
+
+.videoBtn:hover {
+    cursor: pointer;
+}
+
+.videoBtnIcons {
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+    stroke: #fff;
+}
+
+.volumeBtnIcons {
+    width: 90%;
+    height: 90%;
+}
+
+.pauseIcon,
+.fullscreenExitIcon,
+.unmuteIcon {
+    display: none;
+}
+
+.volumeSliderInput {
+    width: 70px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: grey;
+    height: 7px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volumeSliderInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.volumeSliderInput::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(50px);
+    opacity: 4;
+}
+
+.timestamp {
+    width: auto !important;
+    cursor: default;
+}
+
+.timestamp:hover {
+    cursor: default;
+}
+
+.timestampSliderInput {
+    width: calc(100% - 20px);
+    -webkit-appearance: none;
+    appearance: none;
+    background: red;
+    height: 7px;
+    border-radius: 1px;
+    outline: none;
+    margin: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.timestampSliderInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+}
+
+.timestampSliderInput::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.timestampFrameIndicatorContainer {
+    position: relative;
+    bottom: 20px;
+    width: 200px;
+    height: auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.timestampFrame {
+    width: 100%;
+    height: 100px;
+    background-color: #282a35;
+}
+
+.timestampFrameIndicatorDiv {
+    height: 20px;
+}
+
+.timestampFrameIndicator {
+    margin: 0px;
+    margin-top: 5px;
+}
